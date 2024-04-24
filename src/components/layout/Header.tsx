@@ -17,24 +17,24 @@ export const Header = () => {
 
       <hr className="border border-gray-900/30" />
 
-      <nav className="w-6xl mx-auto flex items-center justify-between py-5">
+      <nav className="w-6xl mx-auto flex items-center justify-between py-2 text-tertiary/70">
         <div className="font-semibold uppercase flex items-center gap-3">
-          <Link to={"/"} className="text-sm">Hombre</Link>
-          <Link to={"/"} className="text-sm">Mujer</Link>
-          <Link to={"/"} className="text-sm">Niños</Link>
+          <Link to={"/"} className="text-sm hover:text-tertiary transition-colors duration-300">Hombre</Link>
+          <Link to={"/"} className="text-sm hover:text-tertiary transition-colors duration-300">Mujer</Link>
+          <Link to={"/"} className="text-sm hover:text-tertiary transition-colors duration-300">Niños</Link>
         </div>
 
-        <Link to="/" className="text-4xl uppercase font-extrabold text-tertiary/90">Logo</Link>
+        <Link to="/" className="text-4xl uppercase font-extrabold text-tertiary/90 font-ace">Logo</Link>
 
         <div className="flex items-center gap-4">
           <button>
-            <RiHeart3Line />
+            <RiHeart3Line className="hover:text-tertiary transition-colors duration-300" />
           </button>
           <button>
-            <RiShoppingCartLine />
+            <RiShoppingCartLine className="hover:text-tertiary transition-colors duration-300" />
           </button>
           <button>
-            <RiSearchLine />
+            <RiSearchLine className="hover:text-tertiary transition-colors duration-300" />
           </button>
         </div>
       </nav>
