@@ -13,6 +13,9 @@ export default {
         secondaryBlue: "#1376f4",
         secondaryWhite: "#eeeeee",
       },
+      width: {
+        "6xl": "1200px",
+      }
     },
   },
   plugins: [],
