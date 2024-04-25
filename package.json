@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "embla-carousel-react": "^8.0.2",
     "node": "^18.20.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

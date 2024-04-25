@@ -1,0 +1,15 @@
+.nav__scrolled {
+  @apply fixed top-0 transition-all duration-500 ease-out;
+}
+
+.nav__responsive  {
+  @apply fixed top-0 md:relative transition-all duration-500 ease-out w-full h-screen md:h-auto;
+}
+
+.nav__responsive .items__menu {
+  @apply w-full h-full overflow-hidden flex flex-col md:flex-row gap-10 justify-start md:justify-between pt-28 md:pt-2 items-center bg-white md:py-2 md:w-6xl md:px-10;
+}
+
+.nav__responsive .items {
+  @apply font-semibold uppercase flex flex-col md:flex-row items-center gap-3
+}
