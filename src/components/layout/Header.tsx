@@ -1,11 +1,13 @@
 import classNames from "classnames";
-import { useEffect, useState } from "react";
-import { RiEditLine, RiHeart3Line, RiLockPasswordLine, RiSearchLine, RiShoppingCartLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { RiEditLine, RiHeart3Line, RiLockPasswordLine, RiMenu2Line, RiSearchLine, RiShoppingCartLine } from "react-icons/ri";
 import "./header.css"
+import { MdOutlineClose } from "react-icons/md";
 
 export const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,10 @@ export const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const onShowMenu = () => {
+    setShowMenu(!showMenu);
+  }
 
   return (
     <header className="w-full font-poppins text-tertiary/80">
@@ -35,8 +41,10 @@ export const Header = () => {
 
       <hr className="border border-gray-900/30" />
 
-      <nav className={classNames("md:w-full md:mx-auto md:flex md:justify-center md:bg-white nav__responsive", {
-        "nav__scrolled": scrollPosition > 30
+      <nav className={classNames("nav__responsive transition-all duration-300 ease-out", {
+        "nav__scrolled": scrollPosition > 30,
+        "top-0": showMenu,
+        "-top-[100vh] md:top-0": !showMenu
       })}>
         <div className="text-tertiary/70 items__menu">
           <Link to="/" className="text-4xl uppercase font-extrabold text-tertiary/90 font-ace">Logo</Link>
@@ -60,6 +68,12 @@ export const Header = () => {
           </div>
         </div>
       </nav>
+
+      <button className="absolute bottom-5 right-5 bg-tertiary/90 text-white p-3 box-content rounded-full md:hidden" onClick={onShowMenu}>
+        {
+          !showMenu ? <RiMenu2Line size={25} /> : <MdOutlineClose size={25} />
+        }
+      </button>
     </header>
   );
 };

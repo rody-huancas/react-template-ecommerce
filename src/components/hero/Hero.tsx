@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <>
       <div className="bg-tertiary py-3 text-primary/80">
-        <div className="lg:w-6xl mx-auto flex justify-center gap-5 text-xs uppercase font-semibold">
+        <div className="lg:w-6xl mx-auto flex justify-center gap-5 text-xs uppercase font-semibold w-full overflow-x-hidden">
           <Link to={"/"} className="hover:text-primary transition-colors duration-300">Zapatos</Link>
           <Link to={"/"} className="hover:text-primary transition-colors duration-300">Accesorios</Link>
           <Link to={"/"} className="hover:text-primary transition-colors duration-300">Novedades</Link>
