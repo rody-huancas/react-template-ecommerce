@@ -36,7 +36,7 @@ export const Hero = () => {
             <div className="h-full bg-black opacity-25"></div>
           </div>
         </div>
-    </div>
+      </div>
     </>
   );
 };
