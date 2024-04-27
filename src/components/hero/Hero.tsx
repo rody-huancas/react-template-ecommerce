@@ -1,17 +1,57 @@
 import { Link } from "react-router-dom";
-import pattern from "@assets/hero.webp"
+import Slider from "react-slick";
+import pattern from "@assets/hero.webp";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const Hero = () => {
+  const settings = {
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 100,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
+  };
+
   return (
-    <>
-      <div className="bg-tertiary py-3 text-primary/80">
-        <div className="lg:w-6xl mx-auto flex justify-center gap-5 text-xs uppercase font-semibold w-full overflow-x-hidden">
-          <Link to={"/"} className="hover:text-primary transition-colors duration-300">Zapatos</Link>
-          <Link to={"/"} className="hover:text-primary transition-colors duration-300">Accesorios</Link>
-          <Link to={"/"} className="hover:text-primary transition-colors duration-300">Novedades</Link>
-          <Link to={"/"} className="hover:text-primary transition-colors duration-300">Diseñadores</Link>
-          <Link to={"/"} className="hover:text-primary transition-colors duration-300">Colaboraciones</Link>
-        </div>
+   <>
+      <div className="slider-container w-full bg-tertiary text-primary py-2">
+        <Slider {...settings} className="w-auto lg:w-6xl px-5 mx-auto">
+          <Link to={"/"}>Zapatos</Link>
+          <Link to={"/"}>Accesorios</Link>
+          <Link to={"/"}>Novedades</Link>
+          <Link to={"/"}>Diseñadores</Link>
+          <Link to={"/"}>Colaboraciones</Link>
+          <Link to={"/"}>Ofertas</Link>
+        </Slider>
       </div>
 
       <div className="flex bg-white py-20 lg:py-0 lg:h-[calc(100vh-130px)]">
@@ -37,6 +77,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </>
+   </>
+      
   );
 };
