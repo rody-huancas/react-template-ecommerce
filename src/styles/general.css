@@ -12,17 +12,3 @@
 .font-poppins {
   font-family: "Poppins", sans-serif;
 }
-
-.hero-slider-container {
-  overflow: hidden;
-}
-
-.hero-slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
