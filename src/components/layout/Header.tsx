@@ -69,7 +69,7 @@ export const Header = () => {
         </div>
       </nav>
 
-      <button className="absolute bottom-5 right-5 bg-tertiary/90 text-white p-3 box-content rounded-full md:hidden" onClick={onShowMenu}>
+      <button className="fixed z-50 bottom-5 right-5 bg-tertiary/90 text-white p-3 box-content rounded-full md:hidden" onClick={onShowMenu}>
         {
           !showMenu ? <RiMenu2Line size={25} /> : <MdOutlineClose size={25} />
         }

@@ -14,7 +14,7 @@ const Home = () => {
         <div className="slider-container w-full">
           <Slider
             {...settingsReactSlickCard}
-            className="w-auto xl:w-6xl px-5 mx-auto"
+            className="w-auto xl:w-6xl px-5 mx-auto flex gap-5 lg:gap-0"
           >
             <ItemCard />
             <ItemCard />
