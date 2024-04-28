@@ -53,9 +53,9 @@ export const settingsReactSlickCard = {
       },
     },
     {
-      breakpoint: 600,
+      breakpoint: 740,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 2,
       },

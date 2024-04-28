@@ -28,7 +28,7 @@ export const Header = () => {
 
   return (
     <header className="w-full font-poppins text-tertiary/80">
-      <div className="xl:w-6xl px-10 lg:px-0 mx-auto flex justify-between items-center text-xs uppercase font-semibold py-2">
+      <div className="xl:w-6xl px-10 xl:px-0 mx-auto flex justify-between items-center text-xs uppercase font-semibold py-2">
         <Link to={"/"} className="flex items-center gap-2">
           <span>Registrarse</span>
           <RiEditLine />
@@ -41,9 +41,9 @@ export const Header = () => {
 
       <hr className="border border-gray-900/30" />
 
-      <nav className={classNames("nav__responsive transition-all duration-300 ease-out", {
-        "nav__scrolled": scrollPosition > 30,
-        "top-0": showMenu,
+      <nav className={classNames("nav__responsive transition-all duration-300 ease-out z-30 xl:px-0", {
+        "lg:fixed lg:top-0 transition-all duration-500 ease-out": scrollPosition > 30,
+        "top-0 md:top-auto w-full px-0": showMenu,
         "-top-[100vh] md:top-0": !showMenu
       })}>
         <div className="text-tertiary/70 items__menu">
