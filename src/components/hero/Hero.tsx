@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import pattern from "@assets/hero.webp";
+import { Link } from "react-router-dom";
 import { settingsReactSlick } from "@helpers/index";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

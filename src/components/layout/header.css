@@ -1,5 +1,5 @@
 .nav__scrolled {
-  @apply fixed top-0 transition-all duration-500 ease-out;
+  @apply lg:fixed lg:top-0 transition-all duration-500 ease-out;
 }
 
 .nav__responsive  {

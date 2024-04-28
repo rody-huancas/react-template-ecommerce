@@ -4,3 +4,6 @@ export * from "./layout/Footer"
 
 // hero
 export * from "./hero/Hero"
+
+// cards
+export * from "./cards/ItemCard"

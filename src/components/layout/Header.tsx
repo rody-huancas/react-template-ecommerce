@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import { MdOutlineClose } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { RiEditLine, RiHeart3Line, RiLockPasswordLine, RiMenu2Line, RiSearchLine, RiShoppingCartLine } from "react-icons/ri";
 import "./header.css"
-import { MdOutlineClose } from "react-icons/md";
 
 export const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -28,7 +28,7 @@ export const Header = () => {
 
   return (
     <header className="w-full font-poppins text-tertiary/80">
-      <div className="lg:w-6xl px-10 lg:px-0 mx-auto flex justify-between items-center text-xs uppercase font-semibold py-2">
+      <div className="xl:w-6xl px-10 lg:px-0 mx-auto flex justify-between items-center text-xs uppercase font-semibold py-2">
         <Link to={"/"} className="flex items-center gap-2">
           <span>Registrarse</span>
           <RiEditLine />

@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <div className="bg-white w-full p-8">
-      <div className=" lg:w-6xl mx-auto">
+      <div className=" xl:w-6xl mx-auto">
         <div className="grid grid-rows-1 gap-8 md:grid-cols-12 xl:gap-8">
           <div className="md:col-span-12 xl:col-span-4 flex flex-col gap-4">
             <h1 className="text-3xl font-bold text-gray-900">Brand</h1>
@@ -138,7 +138,7 @@ export const Footer = () => {
       </div>
       <hr className="my-4" />
       <div className="w-full">
-        <div className="w-6xl mx-auto flex flex-col xl:flex-row gap-4 items-center justify-between">
+        <div className="w-auto xl:w-6xl mx-auto flex flex-col xl:flex-row gap-4 items-center justify-between">
           <p className="text-gray-800 text-center md:text-left">
             &copy; { new Date().getFullYear() } {" "}
             <span className="text-gray-900 font-bold">Rody Huancas.</span> Todos los
