@@ -1,10 +1,10 @@
 import Slider from "react-slick";
-import { Hero, ItemCard } from "@components/index";
+import { Hero, ItemCard, ItemCardImage } from "@components/index";
 import { settingsReactSlickCard } from "@helpers/index";
 
 const Home = () => {
   return (
-    <>
+    <div className="mb-10">
       <Hero />
       <div className="bg-tertiary py-5 text-primary text-center uppercase text-2xl font-extrabold font-ace">
         Productos en oferta!!
@@ -26,7 +26,13 @@ const Home = () => {
           </Slider>
         </div>
       </div>
-    </>
+
+      <div className="w-auto xl:w-6xl mx-auto py-5 grid grid-cols-3 place-items-center">
+        <ItemCardImage />
+        <ItemCardImage />
+        <ItemCardImage />
+      </div>
+    </div>
   );
 };
 

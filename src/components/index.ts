@@ -7,3 +7,4 @@ export * from "./hero/Hero"
 
 // cards
 export * from "./cards/ItemCard"
+export * from "./cards/ItemCardImage"
