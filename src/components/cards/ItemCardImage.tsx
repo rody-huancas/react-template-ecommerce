@@ -1,32 +1,42 @@
+import React, { useState } from 'react';
+
 export const ItemCardImage = () => {
+  const [mainImage, setMainImage] = useState("/cards/2.png");
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const handleImageClick = (newImage: string, index: number) => {
+    setMainImage(newImage);
+    setSelectedIndex(index);
+  };
+
   return (
     <div className="w-80 shadow-xl rounded-xl p-5 overflow-hidden flex flex-col gap-5">
       <div className="bg-gray-200 h-60 flex items-center justify-center relative rounded-xl">
-        <img src="/cards/2.png" alt="" className="object-cover rounded-xl" />
+        <img src={mainImage} alt="" className="object-cover rounded-xl" />
 
         <div className="absolute bottom-4 flex items-center gap-5">
-          <span className="w-7 rounded-full bg-gray-700/80 p-1">{""}</span>
-          <span className="w-2 rounded-full bg-gray-700/80 p-1">{""}</span>
-          <span className="w-2 rounded-full bg-gray-700/80 p-1">{""}</span>
+          {[0, 1, 2].map((index) => (
+            <span
+              key={index}
+              className={`rounded-full p-1 transition-all duration-500 ease-linear ${selectedIndex === index ? 'w-7 bg-gray-700' : 'w-1 bg-gray-700/80'}`}
+              onClick={() => handleImageClick(`/cards/${index + 2}.png`, index)}
+            >
+              {""}
+            </span>
+          ))}
         </div>
       </div>
 
       <div className="w-full flex items-center justify-between gap-3">
-        <img
-          src="/cards/2.png"
-          alt=""
-          className="w-20 h-20 object-cover bg-gray-200 rounded-xl p-1 cursor-pointer"
-        />
-        <img
-          src="/cards/3.png"
-          alt=""
-          className="w-20 h-20 object-cover bg-gray-200 rounded-xl p-1 cursor-pointer"
-        />
-        <img
-          src="/cards/4.png"
-          alt=""
-          className="w-20 h-20 object-cover bg-gray-200 rounded-xl p-1 cursor-pointer"
-        />
+        {[0, 1, 2].map((index) => (
+          <div key={index} onClick={() => handleImageClick(`/cards/${index + 2}.png`, index)}>
+            <img
+              src={`/cards/${index + 2}.png`}
+              alt=""
+              className="w-20 h-20 object-cover bg-gray-200 rounded-xl p-1 cursor-pointer"
+            />
+          </div>
+        ))}
       </div>
 
       <h3 className="text-center text-lg uppercase font-bold text-gray-900/70">
