@@ -1,25 +1,10 @@
-import Slider from "react-slick";
 import pattern from "@assets/hero.webp";
 import { Link } from "react-router-dom";
-import { settingsReactSlick } from "@helpers/index";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export const Hero = () => {
 
   return (
    <>
-      <div className="slider-container w-full bg-tertiary text-primary py-2">
-        <Slider {...settingsReactSlick} className="w-auto lg:w-6xl px-5 mx-auto">
-          <Link to={"/"}>Zapatos</Link>
-          <Link to={"/"}>Accesorios</Link>
-          <Link to={"/"}>Novedades</Link>
-          <Link to={"/"}>Diseñadores</Link>
-          <Link to={"/"}>Colaboraciones</Link>
-          <Link to={"/"}>Ofertas</Link>
-        </Slider>
-      </div>
-
       <div className="flex bg-white py-20 lg:py-0 lg:h-[calc(100vh-130px)]">
         <div className="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
           <div>
