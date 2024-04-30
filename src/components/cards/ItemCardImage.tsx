@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { IoMdCart, IoMdEye } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 export const ItemCardImage = () => {
   const [mainImage, setMainImage] = useState("/cards/2.png");
@@ -54,6 +56,17 @@ export const ItemCardImage = () => {
           </p>
         </div>
         <p className="text-gray-400 font-semibold">4 colores</p>
+      </div>
+
+      <div className='grid grid-cols-2 gap-5 place-items-center'>
+        <Link to={"/detail"} className='w-full bg-tertiary/90 py-2.5 rounded text-primary flex items-center justify-center gap-2 hover:bg-tertiary transition-colors duration-500 ease-linear'>
+          <IoMdEye />
+          Detalles
+        </Link>
+        <button className='w-full bg-tertiary/90 py-2.5 rounded text-primary flex items-center justify-center gap-2 hover:bg-tertiary transition-colors duration-500 ease-linear'>
+          <IoMdCart />
+          Agregar
+        </button>
       </div>
     </div>
   );
