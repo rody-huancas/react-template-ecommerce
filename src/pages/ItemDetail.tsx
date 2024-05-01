@@ -1,7 +1,10 @@
-import { FaRegCheckCircle } from "react-icons/fa";
+import { useState } from "react";
 import { IoMdCart } from "react-icons/io";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 const ItemDetail = () => {
+  const [selectedImage, setSelectedImage] = useState("/cards/1.png");
+
   return (
     <section className="w-6xl mx-auto my-10">
       <h1 className="text-5xl font-extrabold text-tertiary/90 uppercase font-poppins">
@@ -9,17 +12,34 @@ const ItemDetail = () => {
       </h1>
       <div className="w-full flex items-start justify-center gap-16 mt-10">
         <div className="w-1/2">
-          <div className="w-full shadow-lg flex items-center justify-center rounded-xl">
-            <img src="/cards/1.png" alt="Producto" className="" />
-          </div>
+          {selectedImage && (
+            <div className="w-full h-96 shadow-lg flex items-center justify-center rounded-xl">
+              <img src={selectedImage} alt="Producto" className="object-cover" />
+            </div>
+          )}
 
           <div className="grid grid-cols-3 place-items-center gap-5 mt-10">
-            <img src="/cards/1.png" alt="Producto" className="p-2 bg-gray-200 h-32 w-full object-cover cursor-pointer rounded-xl" />
-            <img src="/cards/2.png" alt="Producto" className="p-2 bg-gray-200 h-32 w-full object-cover cursor-pointer rounded-xl" />
-            <img src="/cards/3.png" alt="Producto" className="p-2 bg-gray-200 h-32 w-full object-cover cursor-pointer rounded-xl" />
+            <img
+              src="/cards/1.png"
+              alt="Producto"
+              className="p-2 bg-gray-200 h-32 w-full object-cover cursor-pointer rounded-xl"
+              onClick={() => setSelectedImage("/cards/1.png")}
+            />
+            <img
+              src="/cards/2.png"
+              alt="Producto"
+              className="p-2 bg-gray-200 h-32 w-full object-cover cursor-pointer rounded-xl"
+              onClick={() => setSelectedImage("/cards/2.png")}
+            />
+            <img
+              src="/cards/3.png"
+              alt="Producto"
+              className="p-2 bg-gray-200/50 h-32 w-full object-cover cursor-pointer rounded-xl"
+              onClick={() => setSelectedImage("/cards/3.png")}
+            />
           </div>
         </div>
-        
+
         <div className="flex-1 flex flex-col gap-5">
           <h3 className="text-2xl font-black uppercase text-gray-900/90">Zapatilla Adidas R19</h3>
           <p>
