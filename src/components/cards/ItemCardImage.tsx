@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { IoMdCart, IoMdEye } from 'react-icons/io';
-import { Link } from 'react-router-dom';
 
 export const ItemCardImage = () => {
   const [mainImage, setMainImage] = useState("/cards/2.png");
